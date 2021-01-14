@@ -3,8 +3,7 @@ import { CartItem } from "./index";
 const Cart = (props) => {
   const { items, handleClose, show } = props;
   const showHideClassName = show ? "modal display-block" : "modal display-none";
-  console.log("items in cart", items);
-  console.log("items.name:", items.items[0].name);
+
   return (
     <div className={showHideClassName}>
       <section className="modal-main">

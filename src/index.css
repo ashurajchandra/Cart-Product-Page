@@ -50,10 +50,15 @@ code {
 }
 .nav {
   border: 2px solid grey;
+}
+.nav-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+}
+#menuToggle {
+  display: none;
 }
 
 .nav img {
@@ -452,5 +457,7 @@ ul li::before {
    */
   #menuToggle input:checked ~ ul {
     transform: none;
+    left: 200px;
+    width: 30%;
   }
 }

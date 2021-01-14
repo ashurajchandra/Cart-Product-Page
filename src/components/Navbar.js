@@ -11,19 +11,19 @@ class Navbar extends Component {
           <span></span>
           <ul id="menu">
             <a href="#">
-              <li>Home</li>
+              <li>HOME</li>
             </a>
             <a href="#">
-              <li>About</li>
+              <li> MEN</li>
             </a>
             <a href="#">
-              <li>Info</li>
+              <li> WOMEN</li>
             </a>
             <a href="#">
-              <li>Contact</li>
+              <li>LOOKBOOK</li>
             </a>
-            <a href="https://erikterwan.com/" target="_blank">
-              <li>Show me more</li>
+            <a href="#">
+              <li>ABOUT</li>
             </a>
           </ul>
         </div>

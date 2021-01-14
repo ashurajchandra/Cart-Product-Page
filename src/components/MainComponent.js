@@ -81,9 +81,8 @@ class MainComponent extends Component {
   };
   handleClearSelection = () => {
     const { size, colour, qty } = this.state;
-    // const { isItemPresent } = this.props;
+
     this.setState({
-      // isItemPresent: false,
       size: "select Size",
       qty: 0,
       colour: "Select Color",
@@ -92,10 +91,7 @@ class MainComponent extends Component {
 
   render() {
     const { size, colour, qty, image } = this.state;
-    console.log("Props", this.props);
-    console.log(" selected colour is:", colour);
-    console.log(" selected qty is:", qty);
-    console.log(" selected size is:", size);
+
     return (
       <div className="body-part">
         <div className="left-div">

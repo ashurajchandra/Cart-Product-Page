@@ -4,11 +4,7 @@ import Cart from "./cart";
 function Header(props) {
   const { items } = props;
   const [getCart, setCart] = useState(false);
-  console.log("props in header", props, getCart);
-  console.log("items in header", items);
   const { isItemPresent } = props.items;
-  console.log("isItemPresent", isItemPresent);
-  // console.log("items qty:", items.items[0].qty);
 
   function handleClose() {
     setCart(false);

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class CartItem extends Component {
   render() {
     const { item } = this.props;
-    console.log("got props from cart", this.props);
+
     return (
       <div className="cart-Item">
         <div>

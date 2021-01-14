@@ -6,8 +6,6 @@ import App from "./components/App";
 import { configureStore } from "./store";
 
 let store = configureStore();
-console.log("store", store);
-console.log("store", store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
