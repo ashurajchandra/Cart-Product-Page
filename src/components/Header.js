@@ -3,9 +3,14 @@ import { connect } from "react-redux";
 import Cart from "./cart";
 function Header(props) {
   const { items } = props;
+
+  // variables to toggle cart Component
   const [getCart, setCart] = useState(false);
+
+  // variable to check if item is present in cart
   const { isItemPresent } = props.items;
 
+  // function to close cart component
   function handleClose() {
     setCart(false);
   }
@@ -45,10 +50,13 @@ function Header(props) {
     </div>
   );
 }
+
+// taking out item from store and passing it to props
 function mapStateToProps(state) {
   return {
     items: state.items,
   };
 }
 
+// using connect to generate HOC with data in props
 export default connect(mapStateToProps)(Header);

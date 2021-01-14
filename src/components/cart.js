@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { CartItem } from "./index";
 const Cart = (props) => {
   const { items, handleClose, show } = props;
+
+  // dynmically adding className based on show variable
   const showHideClassName = show ? "modal display-block" : "modal display-none";
 
   return (

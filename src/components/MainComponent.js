@@ -5,6 +5,8 @@ import { addToCart } from "../actions/items";
 class MainComponent extends Component {
   constructor() {
     super();
+
+    // variables to keep track of image size & qty
     this.state = {
       image:
         "https://rukminim1.flixcart.com/image/707/848/jp780i80/jacket/f/h/h/6-7-years-926-kidjkt-hd-plain-green-aa-ad-av-original-imafbc9kxcg5ucww.jpeg?q=50",
@@ -13,6 +15,8 @@ class MainComponent extends Component {
       qty: 0,
     };
   }
+
+  // function to set image 1 in state
   handleImage1 = () => {
     const { image } = this.state;
     this.setState({
@@ -20,6 +24,8 @@ class MainComponent extends Component {
         "https://rukminim1.flixcart.com/image/707/848/jp780i80/jacket/d/t/g/2-3-years-926-kidjkt-hd-plain-green-aa-ad-av-original-imafbc9kgwm5wbak.jpeg?q=50",
     });
   };
+
+  //function to set image 2 in state
   handleImage2 = () => {
     const { image } = this.state;
     this.setState({
@@ -27,6 +33,8 @@ class MainComponent extends Component {
         "https://rukminim1.flixcart.com/image/707/848/jp780i80/jacket/f/h/h/3-4-years-926-kidjkt-hd-plain-green-aa-ad-av-original-imafbc9ksmvv9yrq.jpeg?q=50",
     });
   };
+
+  // function to set image 3 in state
   handleImage3 = () => {
     const { image } = this.state;
     this.setState({
@@ -34,6 +42,7 @@ class MainComponent extends Component {
         "https://rukminim1.flixcart.com/image/707/848/jp780i80/jacket/d/t/g/2-3-years-926-kidjkt-hd-plain-green-aa-ad-av-original-imafbc9kgwm5wbak.jpeg?q=50",
     });
   };
+
   handleImage4 = () => {
     const { image } = this.state;
     this.setState({
@@ -42,12 +51,15 @@ class MainComponent extends Component {
     });
   };
 
+  // function to listen change on color
   handleColorChange = (e) => {
     const { colour } = this.state;
     this.setState({
       colour: e.target.value,
     });
   };
+
+  // fucntion to listen change in  qty
   handleQtyChange = (e) => {
     const { qty } = this.state;
     this.setState({
@@ -62,6 +74,7 @@ class MainComponent extends Component {
     });
   };
 
+  // fucntion to add product details in store
   handleAddToCart = () => {
     const { size, colour, qty, image } = this.state;
     let item = {
@@ -76,9 +89,12 @@ class MainComponent extends Component {
       console.log("got all the values");
       this.props.dispatch(addToCart(item));
     } else {
+      // show alert if any one of filed is empty
       alert("more than one field is empty");
     }
   };
+
+  // fucntion to clear all input value
   handleClearSelection = () => {
     const { size, colour, qty } = this.state;
 
