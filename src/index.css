@@ -1,13 +1,456 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.header-part {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  justify-content: space-evenly;
+  width: 100%;
+  height: 25px;
+  background-color: #d3d3d3;
+}
+.header-part img {
+  margin: 3px;
+  width: 30px;
+  height: 20px;
+}
+.header-part h3 {
+  /* display: flex; */
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.header-part-2 {
+  height: 70px;
+  /* border: 2px solid grey; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header-cart-count {
+  border: 2px solid yellow;
+  width: 150px;
+  cursor: pointer;
+}
+.header-cart-count h4 {
+  margin-left: 40px;
+}
+.nav {
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav img {
+  height: 20px;
+}
+#select {
+  border: none;
+  background: white;
+}
+.left-div {
+  border: 2px solid gray;
+  width: 40%;
+  margin: 4%;
+}
+.left-bottom-div img {
+  height: 100px;
+  border: solid 2px grey;
+}
+.left-bottom-div img:hover {
+  border: solid 2px blue;
+}
+.left-bottom-div {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.right-div {
+  margin-left: 47%;
+  margin-top: -77%;
+}
+.blue-text {
+  color: rgb(119, 192, 214);
+  margin-left: 3px;
+}
+#margin-area {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#para-style {
+  line-height: 30px;
+}
+.bold-texts {
+  font-weight: 600;
+}
+#features-list {
+  margin-top: 6px;
+  padding: 8px;
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(160, 144, 144); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+#main-form {
+  margin-top: 16px;
+}
+#review-stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#review-stars img {
+  height: 35px;
+  width: 95px;
+}
+#review-box {
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+.item-desc {
+  display: flex;
+  width: 70%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#size select {
+  height: 40px;
+  background-color: white;
+}
+#colour select {
+  height: 40px;
+  background-color: white;
+}
+#qty input {
+  height: 40px;
+  background-color: white;
+  padding-left: 5px;
+}
+.buttons img {
+  width: 25px;
+}
+.buttons {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.buttons button {
+  height: 50px;
+  width: 215px;
+}
+#cart-button {
+  background-color: black;
+  color: white;
+  font-weight: 800;
+}
+#clear-selection h4 {
+  border-bottom: 2px solid black;
+  width: max-content;
+  cursor: pointer;
+}
+#clear-selection h4:hover {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+.social-share-links {
+  margin-top: 50px;
+  width: 70%;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.social-share-links img {
+  width: 70px;
+  height: 49px;
+}
+.social-share-links h5 {
+  margin-left: 5px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.cart-item {
+  height: 100px;
+  width: 800px;
+}
+#cart-item-img {
+  height: 400px;
+  width: 35%;
+  border: 2px solid grey;
+  margin-left: 5%;
+}
+.left-cart-item-div {
+  margin-left: 45%;
+  margin-top: -26%;
+}
+#my-cart-heading {
+  margin-left: 40%;
+}
+#close-btn {
+  margin-left: 80%;
+  margin-top: 15%;
+  width: 90px;
+  height: 50px;
+  font-weight: 900;
+}
+@media screen and (min-width: 485px) {
+}
+/* media querries for responsiveness */
+@media screen and (max-width: 480px) {
+  /* .cart-item {
+    height: 100px;
+    width: 800px;
+  } */
+  #my-cart-heading {
+    /* margin-left: 30%; */
+    margin: 0;
+  }
+  #cart-item-img {
+    height: 400px;
+    width: 70%;
+    border: 2px solid grey;
+    /* margin: 5%; */
+    margin: 0;
+  }
+  .left-cart-item-div {
+    /* margin-left: 10%;
+    margin-top: -7%; */
+    margin: 0;
+  }
+
+  #close-btn {
+    width: 80%;
+    height: 50px;
+    font-weight: 900;
+    /* margin: 26px; */
+    margin: 0;
+  }
+  .header-part {
+    height: 50px;
+    width: 450px;
+    margin: 0;
+  }
+  .left-div {
+    border: 2px solid gray;
+    width: 100%;
+    margin: 0;
+  }
+  .left-bottom-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  .left-div img {
+    height: 450px;
+    width: 100%;
+  }
+  .left-bottom-div img {
+    height: 100px;
+    border: solid 2px grey;
+  }
+  .right-div {
+    margin: 0;
+    padding: 20px;
+  }
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons button {
+    width: 100%;
+  }
+  .social-share-links {
+    width: 100%;
+  }
+  .nav-item {
+    display: none;
+  }
+  .nav {
+    border: none;
+  }
+
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -250px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
 }
